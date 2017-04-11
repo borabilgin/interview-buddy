@@ -1,0 +1,25 @@
+<h2>Add a new question</h2>
+<form class="add-question-form">
+  <md-input-container class="full-width">
+    <input mdInput name="title" [(ngModel)]="title" placeholder="Title">
+  </md-input-container>
+  <md-input-container class="full-width">
+    <input mdInput name="description" type="description" [(ngModel)]="description" placeholder="Description">
+  </md-input-container>   
+  <md-input-container class="full-width">
+    <input mdInput name="typicalAnswer" [(ngModel)]="typicalAnswer" placeholder="Typical answer">
+  </md-input-container>
+  <md-input-container class="full-width">
+    <input mdInput name="difficulty" type="difficulty" [(ngModel)]="difficulty" placeholder="Difficulty (1-5, 1=easiest)">
+  </md-input-container> 
+  <md-input-container class="full-width">
+     <md-checkbox  [(ngModel)]="hasFollowupQuestion">Has followup question</md-checkbox>
+  </md-input-container> 
+
+  <app-addquestion #followupQuestion *ngIf="hasFollowupQuestion" (enableSave)="false"></app-addquestion>  
+  
+  <div class="button-row" >
+    <button md-raised-button (click)="saveQuestion()">Save</button>    
+    {{saveStatus}}
+  </div>   
+</form>

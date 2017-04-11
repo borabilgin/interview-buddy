@@ -14,6 +14,8 @@ import {AuthService} from './services/auth.service';
 import { AngularFire } from 'angularfire2';
 import { AngularFireModule } from 'angularfire2';
 import {AppConfig} from './app.config';
+import { QuestionlistComponent } from './components/questionlist/questionlist.component';
+import { AddquestionComponent } from './components/addquestion/addquestion.component';
 
 const SERVICE_PROVIDERS = [
   AuthService  
@@ -24,7 +26,9 @@ const SERVICE_PROVIDERS = [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    QuestionlistComponent,
+    AddquestionComponent
   ],
   imports: [
     BrowserModule,

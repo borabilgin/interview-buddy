@@ -1,0 +1,6 @@
+<h2>Top secret interview questions</h2>
+<ul>
+    <li *ngFor="let q of questions | async">
+       {{ q.title }}, {{ q.description}} - answer: {{ q.typicalAnswer}} , diff: {{ q.difficulty }}
+    </li>
+  </ul>

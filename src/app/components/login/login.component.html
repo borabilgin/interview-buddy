@@ -1,11 +1,14 @@
 <form class="login-form">
   <md-input-container class="login-full-width">
-    <input mdInput placeholder="Username">
+    <input mdInput name="username" [(ngModel)]="username" placeholder="Username">
   </md-input-container>
   <md-input-container class="login-full-width">
-    <input mdInput type="password" placeholder="Password">
+    <input mdInput name="password" type="password" [(ngModel)]="password" placeholder="Password">
   </md-input-container>   
   <div class="button-row">
-    <button md-raised-button>Login</button>    
-  </div>    
+    <button md-raised-button (click)="loginClick()">Login</button>    
+  </div>  
+  <div>
+    {{loginMessage}}
+  </div>  
 </form>
